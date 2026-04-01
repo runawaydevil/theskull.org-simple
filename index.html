@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TheSkulls.org by runawaydevil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+    }
+    body {
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 20%, #002a2a, #000);
+    }
+    body > div {
+      padding: 0 10px 20px;
+      border-radius: 40px;
+      box-shadow: 0 0 50px 50px #000;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<div><canvas width="640" height="480"></canvas></div>
+
+<noscript>
+  <p style="color:#fee;font-family:system-ui,sans-serif;text-align:center;padding:1rem;">Ativa JavaScript para ver a demo WebGL.</p>
+</noscript>
+
+<!--
+
+WebGL CRT monitor effect demo with a tiny surprise. Uses offscreen 2D canvas as buffer source.
+
+Libraries and sources:
+
+- ReGL (WebGL helper): http://regl.party/
+- glMatrix (math): http://glmatrix.net/
+- onecolor (RGB conversion): https://github.com/One-com/one-color
+- Google Fonts Inconsolata
+- Banner: banner-data.js (data URL, safe for file:// + WebGL); blink + 2D slice glitch before CRT shader
+
+-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/regl@2.1.0/dist/regl.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/onecolor@3.1.0/one-color-all.js" crossorigin="anonymous"></script>
+  <script src="banner-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
